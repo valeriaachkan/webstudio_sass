@@ -5,13 +5,8 @@
 @import './utils/visually-hidden';
 @import './common/common';
 @import './common/page-header';
-@import './components_main/hero';
 @import './common/logo';
-@import './components_main/section-features';
-@import './components_main/section-service-area';
-@import './components_main/section-team';
-@import './components_main/section-clients';
 @import './common/page-footer';
 @import './common/subscription-form';
-@import './components_main/modal';
-@import './components_main/modal-form';
+@import './components_portfolio/filter-buttons';
+@import './components_portfolio/projects_gallery';

@@ -1,0 +1,17 @@
+.logo {
+    color: $accent-color;
+    font-family: $logo-span-font;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19; 
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    & span {
+        color: #000000;  
+    }
+
+    &--footer span {
+        color: #FFFFFF;
+    }
+}

@@ -1,0 +1,96 @@
+.page-header {
+    border-bottom: 1px solid #ECECEC;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.site-nav {
+    margin-left: 93px;
+}
+.site-nav__list {
+    @extend %list;
+    display: flex;
+    margin-left: 0;
+}
+.site-nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+.site-nav__link {
+    position: relative;
+
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    color: $primary-text-color;
+    text-decoration: none;
+
+    transition: color 250ms $o-animation-timing-function;
+    
+    &:hover,
+    &:focus {
+    color: $accent-color;
+    }
+    
+    &--current {
+        color: $accent-color;
+    }
+
+    &::after {
+        content: ' ';
+        display: inline-block;
+    
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-color;
+    
+        transform: scale(0);
+        transition: transform 250ms $o-animation-timing-function;
+    }
+    &--current::after {
+        transform: scale(1);
+    }
+    &:hover::after,
+    &:focus::after {
+        transform: scale(1);
+    }
+}
+
+.contacts {
+    margin-left: auto;
+}
+.contacts__link {
+    color: $secondary-text-color;
+    fill: $secondary-text-color;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    transition: color 250ms $o-animation-timing-function, fill 250ms $o-animation-timing-function;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        fill: $accent-color;
+    }
+}
+
+.contacts__icon {
+    margin-right: 10px;
+}

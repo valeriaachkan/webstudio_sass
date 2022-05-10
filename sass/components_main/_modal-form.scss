@@ -1,0 +1,130 @@
+.modal__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $primary-text-color;
+}
+.form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    position: relative;
+
+    fill: #000000;
+}
+.form__label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: $secondary-text-color
+}
+.form__input {
+    padding: 12px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    &:focus {
+        border: 1px solid $accent-color;
+        outline: 0;
+    }
+    &:focus + .input-icon {
+        fill: $accent-color;
+    }
+    &--comment {
+        height: 120px;
+        padding-right: 16px;
+        padding-left: 16px;
+        resize: none;
+
+        &::placeholder { 
+            color: rgba(117, 117, 117, 0.5);
+        }
+    }
+}
+
+.form__icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    
+    fill: $primary-text-color;
+}
+
+.policy {
+    position: relative;
+
+    margin-top: 10px;
+    border: 1px black;
+}
+.policy__text {
+    display: inline-block;
+    margin: 0;
+    margin-left: 19px;
+
+    font-size: 14px;
+    line-height: 1.71;
+    color: $secondary-text-color
+}
+.policy__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked + .policy__icon {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        background-image: url(../images/icon-check.svg);
+        background-origin: content-box;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.policy__icon {
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    transform: translateY(-50%);
+
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+
+    border: 1.65px solid $primary-text-color;
+    border-radius: 1.7px;
+}
+
+.policy__link {
+    font-size: 14px;
+    line-height: 1.71;
+    color: $accent-color;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__button {
+    @extend %button;
+    padding: 10px 55px;
+    margin-top: 30px;
+}
